@@ -43,35 +43,34 @@ def groq(system, user, max_tokens=500):
 
 
 def fetch_papers(topic, max_results=25):
-    """Fetch papers from OpenAlex — free, no key, no rate limits."""
+    """Fetch papers from Semantic Scholar."""
     r = requests.get(
-        "https://api.openalex.org/works",
+        "https://api.semanticscholar.org/graph/v1/paper/search",
         params={
-            "search": topic,
-            "per-page": max_results,
-            "filter": "has_abstract:true",
-            "sort": "relevance_score:desc",
-            "mailto": "veridical@example.com",
+            "query": topic,
+            "limit": max_results,
+            "fields": "title,abstract,authors,year,externalIds",
+        },
+        headers={
+            "User-Agent": "Veridical/1.0",
+            "x-api-key": os.environ.get("SEMANTIC_SCHOLAR_KEY", ""),
         },
         timeout=30,
     )
     r.raise_for_status()
     papers = []
-    for p in r.json().get("results", []):
-        abstract_raw = p.get("abstract_inverted_index")
-        if not abstract_raw:
+    for p in r.json().get("data", []):
+        if not p.get("abstract"):
             continue
-        # OpenAlex stores abstracts as inverted index — reconstruct it
-        words = sorted(abstract_raw.items(), key=lambda x: x[1][0])
-        abstract = " ".join(w for w, _ in words)
-        doi = p.get("doi", "")
+        arxiv_id = p.get("externalIds", {}).get("ArXiv")
+        url = f"https://arxiv.org/abs/{arxiv_id}" if arxiv_id else f"https://semanticscholar.org/paper/{p.get('paperId','')}"
         papers.append({
-            "id":       p.get("id", ""),
-            "title":    p.get("title", ""),
-            "authors":  [a["author"]["display_name"] for a in p.get("authorships", [])[:5]],
-            "abstract": abstract,
-            "published": p.get("publication_year", ""),
-            "url":      doi if doi else p.get("id", ""),
+            "id":        p.get("paperId", ""),
+            "title":     p.get("title", ""),
+            "authors":   [a["name"] for a in p.get("authors", [])],
+            "abstract":  p.get("abstract", ""),
+            "published": str(p.get("year", "")),
+            "url":       url,
         })
     return papers
 
