@@ -1,0 +1,805 @@
+{
+  "nodes": [
+    {
+      "id": "2605.15198v1",
+      "title": "ATLAS: Agentic or Latent Visual Reasoning? One Word is Enough for Both",
+      "claim": "ATLAS, a framework using a single discrete 'word' as both an agentic operation and a latent visual reasoning unit, achieves superior performance on challenging visual reasoning benchmarks while maintaining interpretability",
+      "cluster": 0,
+      "methodology": "empirical study",
+      "confidence": "high"
+    },
+    {
+      "id": "2605.15196v1",
+      "title": "RefDecoder: Enhancing Visual Generation with Conditional Video Decoding",
+      "claim": "RefDecoder, a reference-conditioned video VAE decoder, achieves consistent improvements in video generation quality, with up to +2.1dB PSNR over unconditional baselines, by injecting high-fidelity reference image signals into the decoding process",
+      "cluster": 1,
+      "methodology": "empirical study",
+      "confidence": "high"
+    },
+    {
+      "id": "2605.15188v1",
+      "title": "FutureSim: Replaying World Events to Evaluate Adaptive Agents",
+      "claim": "The best-performing AI agent achieves only 25% accuracy in predicting world events over a three-month period, indicating significant limitations in current adaptive agent capabilities.",
+      "cluster": 5,
+      "methodology": "empirical study",
+      "confidence": "high"
+    },
+    {
+      "id": "2605.15186v1",
+      "title": "VGGT-Edit: Feed-forward Native 3D Scene Editing with Residual Field Prediction",
+      "claim": "VGGT-Edit, a feed-forward framework for text-conditioned native 3D scene editing, substantially outperforms 2D-lifting baselines in producing high-fidelity 3D scenes with sharper object details and stronger multi-view consistency",
+      "cluster": 0,
+      "methodology": "empirical study",
+      "confidence": "high"
+    },
+    {
+      "id": "2605.15185v1",
+      "title": "Quantitative Video World Model Evaluation for Geometric-Consistency",
+      "claim": "A quantitative framework called PDI-Bench can effectively evaluate the geometric coherence of generated videos by capturing scale-depth alignment, 3D motion consistency, and 3D structural rigidity failures",
+      "cluster": 0,
+      "methodology": "empirical study",
+      "confidence": "high"
+    },
+    {
+      "id": "2605.15184v1",
+      "title": "Is Grep All You Need? How Agent Harnesses Reshape Agentic Search",
+      "claim": "Grep generally yields higher accuracy than vector retrieval in agentic search systems, particularly when tool results are presented inline or in separate files",
+      "cluster": 0,
+      "methodology": "empirical study",
+      "confidence": "medium"
+    },
+    {
+      "id": "2605.15183v1",
+      "title": "When Are Two Networks the Same? Tensor Similarity for Mechanistic Interpretability",
+      "claim": "Tensor similarity, a weight-based metric, can accurately capture global functional equivalence between tensor-based models, invariant to weight-space symmetries and accounting for cross-layer mechanisms.",
+      "cluster": 3,
+      "methodology": "empirical study",
+      "confidence": "high"
+    },
+    {
+      "id": "2605.15179v1",
+      "title": "Eradicating Negative Transfer in Multi-Physics Foundation Models via Sparse Mixture-of-Experts Routing",
+      "claim": "Sparse mixture-of-experts routing can effectively mitigate negative transfer in multi-physics foundation models, enabling simultaneous convergence across disparate physical regimes.",
+      "cluster": 2,
+      "methodology": "empirical study",
+      "confidence": "high"
+    },
+    {
+      "id": "2605.15177v1",
+      "title": "OpenDeepThink: Parallel Reasoning via Bradley--Terry Aggregation",
+      "claim": "OpenDeepThink, a population-based test-time compute framework, raises Gemini 3.1 Pro's effective Codeforces Elo by +405 points in eight sequential LLM-call rounds",
+      "cluster": 4,
+      "methodology": "empirical study",
+      "confidence": "high"
+    },
+    {
+      "id": "2605.15172v1",
+      "title": "MetaBackdoor: Exploiting Positional Encoding as a Backdoor Attack Surface in LLMs",
+      "claim": "Positional encoding in Transformer-based large language models can be exploited as a backdoor attack surface using length-based triggers without modifying the input text.",
+      "cluster": 3,
+      "methodology": "empirical study",
+      "confidence": "high"
+    },
+    {
+      "id": "2605.15171v1",
+      "title": "Evidential Reasoning Advances Interpretable Real-World Disease Screening",
+      "claim": "EviScreen, an evidential reasoning framework, enhances disease screening performance by leveraging region-level evidence from historical cases and providing transparent reasoning pathways",
+      "cluster": 5,
+      "methodology": "empirical study",
+      "confidence": "high"
+    },
+    {
+      "id": "2605.15168v1",
+      "title": "Text Knows What, Tables Know When: Clinical Timeline Reconstruction via Retrieval-Augmented Multimodal Alignment",
+      "claim": "A retrieval-augmented multimodal alignment framework can improve the temporal precision of clinical timelines by combining unstructured clinical narratives with structured electronic health record data",
+      "cluster": 3,
+      "methodology": "empirical study",
+      "confidence": "high"
+    },
+    {
+      "id": "2605.15164v1",
+      "title": "Position: Behavioural Assurance Cannot Verify the Safety Claims Governance Now Demands",
+      "claim": "Current assurance methodologies, such as behavioural evaluations and red-teaming, cannot verify the safety claims required by AI governance frameworks due to their limitations in verifying latent representations or long-horizon agentic behaviours",
+      "cluster": 5,
+      "methodology": "theoretical",
+      "confidence": "high"
+    },
+    {
+      "id": "2605.15157v1",
+      "title": "Hand-in-the-Loop: Improving Dexterous VLA via Seamless Interventional Correction",
+      "claim": "Hand-in-the-Loop (HandITL) reduces takeover jitter by 99.8% and improves post-takeover manipulation by reducing grasp failures by 87.5% and mean completion time by 19.1% in dexterous robotic hand tasks",
+      "cluster": 4,
+      "methodology": "empirical study",
+      "confidence": "high"
+    },
+    {
+      "id": "2605.15156v1",
+      "title": "MeMo: Memory as a Model",
+      "claim": "MeMo, a modular framework, enables efficient incorporation of new knowledge into large language models without modifying their parameters or requiring access to their weights or output logits.",
+      "cluster": 3,
+      "methodology": "empirical study",
+      "confidence": "high"
+    },
+    {
+      "id": "2605.15155v1",
+      "title": "Self-Distilled Agentic Reinforcement Learning",
+      "claim": "Self-Distilled Agentic Reinforcement Learning (SDAR) substantially improves over existing reinforcement learning methods by introducing a gated auxiliary objective that stabilizes supervision and strengthens distillation on positive-gap tokens",
+      "cluster": 2,
+      "methodology": "empirical study",
+      "confidence": "high"
+    },
+    {
+      "id": "2605.15154v1",
+      "title": "RoSHAP: A Distributional Framework and Robust Metric for Stable Feature Attribution",
+      "claim": "Incorporating the stochastic nature of feature attribution into a distributional framework and using the RoSHAP metric leads to more stable and reliable feature rankings in machine learning models.",
+      "cluster": 1,
+      "methodology": "empirical study",
+      "confidence": "high"
+    },
+    {
+      "id": "2605.15153v1",
+      "title": "Pelican-Unified 1.0: A Unified Embodied Intelligence Model for Understanding, Reasoning, Imagination and Action",
+      "claim": "Pelican-Unified 1.0, a unified embodied intelligence model, achieves strong performance across understanding, reasoning, imagination, and action capabilities without compromising specialist strength",
+      "cluster": 0,
+      "methodology": "empirical study",
+      "confidence": "high"
+    },
+    {
+      "id": "2605.15152v1",
+      "title": "Widening the Gap: Exploiting LLM Quantization via Outlier Injection",
+      "claim": "A novel quantization-conditioned attack can induce malicious behavior in large language models by injecting outliers into specific weight blocks, causing a targeted weight collapse after quantization with various advanced techniques",
+      "cluster": 4,
+      "methodology": "empirical study",
+      "confidence": "high"
+    },
+    {
+      "id": "2605.15138v1",
+      "title": "Forgetting That Sticks: Quantization-Permanent Unlearning via Circuit Attribution",
+      "claim": "MANSU is the first method to achieve meaningful forgetting, retain preservation, non-positive PTQ gap, and structural erasure across multiple model families and hazard benchmarks, outperforming gradient-based baselines under compression.",
+      "cluster": 3,
+      "methodology": "empirical study",
+      "confidence": "high"
+    },
+    {
+      "id": "2605.15134v1",
+      "title": "Training ML Models with Predictable Failures",
+      "claim": "Fine-tuning ML models with a forecastability loss objective substantially reduces held-out forecast error while preserving primary-task capability and achieving safety similar to supervised baselines",
+      "cluster": 1,
+      "methodology": "empirical study",
+      "confidence": "medium"
+    },
+    {
+      "id": "2605.15133v1",
+      "title": "Causal Foundation Models with Continuous Treatments",
+      "claim": "A novel causal foundation model can predict causal effects across a wide variety of unseen tasks in the continuous treatment setting without additional training or fine-tuning",
+      "cluster": 2,
+      "methodology": "empirical study",
+      "confidence": "high"
+    },
+    {
+      "id": "2605.15132v1",
+      "title": "APWA: A Distributed Architecture for Parallelizable Agentic Workflows",
+      "claim": "APWA, a distributed multi-agent system architecture, enables efficient processing of heavily parallelizable agentic workloads by decomposing workflows into non-interfering subproblems that can be processed independently",
+      "cluster": 4,
+      "methodology": "empirical study",
+      "confidence": "high"
+    },
+    {
+      "id": "2605.15131v1",
+      "title": "Natural Synthesis: Outperforming Reactive Synthesis Tools with Large Reasoning Models",
+      "claim": "A neuro-symbolic approach to reactive synthesis, combining large reasoning models with model checkers, can outperform dedicated tools in solving benchmarks and constructing parameterized systems.",
+      "cluster": 0,
+      "methodology": "empirical study",
+      "confidence": "high"
+    },
+    {
+      "id": "2605.15128v1",
+      "title": "MemEye: A Visual-Centric Evaluation Framework for Multimodal Agent Memory",
+      "claim": "Current architectures struggle to preserve fine-grained visual details and reason about state changes over time in long-term multimodal agent memory",
+      "cluster": 0,
+      "methodology": "empirical study",
+      "confidence": "high"
+    },
+    {
+      "id": "2605.15118v1",
+      "title": "Talk is (Not) Cheap: A Taxonomy and Benchmark Coverage Audit for LLM Attacks",
+      "claim": "Current LLM attack benchmarks cover at most 25% of the threat surface, with entire STRIDE threat categories lacking standardized evaluation despite published attacks achieving high success rates.",
+      "cluster": 4,
+      "methodology": "empirical study",
+      "confidence": "high"
+    },
+    {
+      "id": "2605.15113v1",
+      "title": "Learning from Language Feedback via Variational Policy Distillation",
+      "claim": "Variational Policy Distillation (VPD) overcomes the limitations of passive distillation by co-evolving both teacher and student policies, leading to improved performance on complex reasoning tasks",
+      "cluster": 2,
+      "methodology": "empirical study",
+      "confidence": "high"
+    },
+    {
+      "id": "2605.15110v1",
+      "title": "Proposal and study of statistical features for string similarity computation and classification",
+      "claim": "Co-occurrence matrix and run-length matrix features outperform state-of-the-art statistical features in string similarity computation and classification tasks",
+      "cluster": 3,
+      "methodology": "empirical study",
+      "confidence": "high"
+    },
+    {
+      "id": "2605.15104v1",
+      "title": "From Text to Voice: A Reproducible and Verifiable Framework for Evaluating Tool Calling LLM Agents",
+      "claim": "A dataset-agnostic framework can convert verified text benchmarks into controlled audio-based tool calling evaluations without re-annotating the tool schema and gold labels, with model performance being strongly model- and task-dependent",
+      "cluster": 3,
+      "methodology": "empirical study",
+      "confidence": "high"
+    },
+    {
+      "id": "2605.15102v1",
+      "title": "Improving Multi-turn Dialogue Consistency with Self-Recall Thinking",
+      "claim": "Self-Recall Thinking (SRT) improves multi-turn dialogue consistency by selectively recalling and reasoning over context during inference, resulting in a 4.7% increase in F1 score and 14.7% reduction in end-to-end latency",
+      "cluster": 3,
+      "methodology": "empirical study",
+      "confidence": "high"
+    },
+    {
+      "id": "2605.15100v1",
+      "title": "Dual-Dimensional Consistency: Balancing Budget and Quality in Adaptive Inference-Time Scaling",
+      "claim": "Dual-Dimensional Consistency (DDC) reduces token consumption by over 10 times while maintaining or exceeding the accuracy of strong baselines across various Large Language Models (LLMs)",
+      "cluster": 3,
+      "methodology": "empirical study",
+      "confidence": "high"
+    },
+    {
+      "id": "2605.15085v1",
+      "title": "From Data to Action: Accelerating Refinery Optimization with AI",
+      "claim": "Integrating machine learning approaches, such as Anomaly Detection tools, with Linear Programming solutions can reveal business opportunities and data supply errors in refinery optimization",
+      "cluster": 1,
+      "methodology": "empirical study",
+      "confidence": "medium"
+    },
+    {
+      "id": "2605.15083v1",
+      "title": "Novel Dynamic Batch-Sensitive Adam Optimiser for Vehicular Accident Injury Severity Prediction",
+      "claim": "Dynamic Batch-Sensitive Adam (DBS-Adam) optimiser outperforms state-of-the-art optimisers in accident injury severity prediction, achieving 95.22% test accuracy and statistically significant precision improvements",
+      "cluster": 1,
+      "methodology": "empirical study",
+      "confidence": "high"
+    },
+    {
+      "id": "2605.15082v1",
+      "title": "Average Gradient Outer Product in kernel regression provably recovers the central subspace for multi-index models",
+      "claim": "The Average Gradient Outer Product of a kernel ridge regression model provably recovers the central subspace of a multi-index polynomial function, even with a limited number of samples.",
+      "cluster": 1,
+      "methodology": "theoretical",
+      "confidence": "high"
+    },
+    {
+      "id": "2605.15081v1",
+      "title": "ML-Embed: Inclusive and Efficient Embeddings for a Multilingual World",
+      "claim": "ML-Embed, a suite of models built upon the 3-Dimensional Matryoshka Learning framework, sets new records on 9 of 17 evaluated MTEB benchmarks and achieves strong results in low-resource languages",
+      "cluster": 3,
+      "methodology": "empirical study",
+      "confidence": "high"
+    },
+    {
+      "id": "2605.15077v1",
+      "title": "Concurrency without Model Changes: Future-based Asynchronous Function Calling for LLMs",
+      "claim": "AsyncFC, a pure execution-layer framework, significantly reduces end-to-end task completion time in LLMs without requiring model changes or fine-tuning",
+      "cluster": 3,
+      "methodology": "empirical study",
+      "confidence": "high"
+    },
+    {
+      "id": "2605.15071v1",
+      "title": "On the Cultural Anachronism and Temporal Reasoning in Vision Language Models",
+      "claim": "State-of-the-art vision-language models exhibit significant deficiencies in temporal reasoning, achieving only 58.7% overall accuracy on a benchmark of 600 questions across 1,600 Indian cultural artifacts",
+      "cluster": 0,
+      "methodology": "empirical study",
+      "confidence": "high"
+    },
+    {
+      "id": "2605.15055v1",
+      "title": "DiffusionOPD: A Unified Perspective of On-Policy Distillation in Diffusion Models",
+      "claim": "DiffusionOPD, a multi-task training paradigm for diffusion models based on Online Policy Distillation, consistently surpasses existing methods in training efficiency and final performance across various benchmarks.",
+      "cluster": 2,
+      "methodology": "empirical study",
+      "confidence": "high"
+    },
+    {
+      "id": "2605.15051v1",
+      "title": "An Interpretable Latency Model for Speculative Decoding in LLM Serving",
+      "claim": "Speculative decoding in large language model serving systems can be accurately modeled using a simple and interpretable latency model that accounts for load-independent and load-dependent components",
+      "cluster": 3,
+      "methodology": "empirical study",
+      "confidence": "high"
+    },
+    {
+      "id": "2605.15050v1",
+      "title": "Separating Intrinsic Ambiguity from Estimation Uncertainty in Deep Generative Models for Linear Inverse Problems",
+      "claim": "Deep generative models can be decomposed to separate intrinsic ambiguity from estimation uncertainty in linear inverse problems, enabling more accurate interpretation of posterior uncertainty",
+      "cluster": 1,
+      "methodology": "empirical study",
+      "confidence": "high"
+    },
+    {
+      "id": "2605.15044v1",
+      "title": "SpeakerLLM: A Speaker-Specialized Audio-LLM for Speaker Understanding and Verification Reasoning",
+      "claim": "SpeakerLLM, a speaker-specialized audio-LLM framework, improves speaker-profile and recording-condition understanding over general audio-LLMs and achieves strong generated-verdict accuracy in speaker verification tasks",
+      "cluster": 3,
+      "methodology": "empirical study",
+      "confidence": "high"
+    },
+    {
+      "id": "2605.15041v1",
+      "title": "Case-Based Calibration of Adaptive Reasoning and Execution for LLM Tool Use",
+      "claim": "CAST, a case-driven framework, improves large language model tool use by increasing execution accuracy up to 5.85 percentage points and reducing average reasoning length by 26% through adaptive reasoning and case-based calibration.",
+      "cluster": 3,
+      "methodology": "empirical study",
+      "confidence": "high"
+    },
+    {
+      "id": "2605.15040v1",
+      "title": "Orchard: An Open-Source Agentic Modeling Framework",
+      "claim": "Orchard, an open-source framework for scalable agentic modeling, achieves state-of-the-art results in various domains, including coding agents, vision-language computer-use agents, and personal assistant agents, using reusable primitives and lightweight environment services",
+      "cluster": 0,
+      "methodology": "empirical study",
+      "confidence": "high"
+    },
+    {
+      "id": "2605.15035v1",
+      "title": "TopoPrimer: The Missing Topological Context in Forecasting Models",
+      "claim": "TopoPrimer, a framework that incorporates global topological structure into forecasting models, improves accuracy by up to 7.3% MSE across diverse domains and stabilizes forecasts under seasonal demand spikes",
+      "cluster": 1,
+      "methodology": "empirical study",
+      "confidence": "high"
+    },
+    {
+      "id": "2605.15034v1",
+      "title": "AI Knows When It's Being Watched: Functional Strategic Action and Contextual Register Modulation in Large Language Models",
+      "claim": "Large language models exhibit systematic linguistic adaptation in response to perceived social observation contexts, with monitored conditions producing higher type-token ratio changes than non-monitored conditions",
+      "cluster": 3,
+      "methodology": "empirical study",
+      "confidence": "high"
+    },
+    {
+      "id": "2605.15030v1",
+      "title": "WARD: Adversarially Robust Defense of Web Agents Against Prompt Injections",
+      "claim": "WARD achieves nearly perfect recall on out-of-distribution benchmarks and remains robust against guard-targeted and adaptive attacks under substantial distribution shifts.",
+      "cluster": 4,
+      "methodology": "empirical study",
+      "confidence": "high"
+    },
+    {
+      "id": "2605.15026v1",
+      "title": "SemaTune: Semantic-Aware Online OS Tuning with Large Language Models",
+      "claim": "SemaTune, a semantic-aware online OS tuning framework, improves stable-phase performance by 72.5% over default settings and by 153.3% relative to the strongest non-LLM baseline across 13 live workloads from five benchmark suites.",
+      "cluster": 3,
+      "methodology": "empirical study",
+      "confidence": "high"
+    }
+  ],
+  "edges": [
+    {
+      "a": "2605.15198v1",
+      "b": "2605.15071v1",
+      "title_a": "ATLAS: Agentic or Latent Visual Reasoning? One Word is Enough for Both",
+      "title_b": "On the Cultural Anachronism and Temporal Reasoning in Vision Language Models",
+      "claim_a": "ATLAS, a framework using a single discrete 'word' as both an agentic operation and a latent visual reasoning unit, achieves superior performance on challenging visual reasoning benchmarks while maintaining interpretability",
+      "claim_b": "State-of-the-art vision-language models exhibit significant deficiencies in temporal reasoning, achieving only 58.7% overall accuracy on a benchmark of 600 questions across 1,600 Indian cultural artifacts",
+      "cluster": 0,
+      "verdict": "unrelated",
+      "confidence": "high",
+      "reason": "Claim A discusses a framework for visual reasoning using a single discrete 'word', while Claim B focuses on the deficiencies of vision-language models in temporal reasoning, making them distinct topics."
+    },
+    {
+      "a": "2605.15186v1",
+      "b": "2605.15185v1",
+      "title_a": "VGGT-Edit: Feed-forward Native 3D Scene Editing with Residual Field Prediction",
+      "title_b": "Quantitative Video World Model Evaluation for Geometric-Consistency",
+      "claim_a": "VGGT-Edit, a feed-forward framework for text-conditioned native 3D scene editing, substantially outperforms 2D-lifting baselines in producing high-fidelity 3D scenes with sharper object details and stronger multi-view consistency",
+      "claim_b": "A quantitative framework called PDI-Bench can effectively evaluate the geometric coherence of generated videos by capturing scale-depth alignment, 3D motion consistency, and 3D structural rigidity failures",
+      "cluster": 0,
+      "verdict": "unrelated",
+      "confidence": "high",
+      "reason": "Claim A focuses on 3D scene editing, while Claim B discusses evaluating geometric consistency in generated videos, making them distinct topics with no direct comparison."
+    },
+    {
+      "a": "2605.15184v1",
+      "b": "2605.15198v1",
+      "title_a": "Is Grep All You Need? How Agent Harnesses Reshape Agentic Search",
+      "title_b": "ATLAS: Agentic or Latent Visual Reasoning? One Word is Enough for Both",
+      "claim_a": "Grep generally yields higher accuracy than vector retrieval in agentic search systems, particularly when tool results are presented inline or in separate files",
+      "claim_b": "ATLAS, a framework using a single discrete 'word' as both an agentic operation and a latent visual reasoning unit, achieves superior performance on challenging visual reasoning benchmarks while maintaining interpretability",
+      "cluster": 0,
+      "verdict": "unrelated",
+      "confidence": "high",
+      "reason": "Claim A discusses the comparison between Grep and vector retrieval in agentic search systems, while Claim B introduces a framework for visual reasoning, making the two claims about different topics."
+    },
+    {
+      "a": "2605.15153v1",
+      "b": "2605.15128v1",
+      "title_a": "Pelican-Unified 1.0: A Unified Embodied Intelligence Model for Understanding, Reasoning, Imagination and Action",
+      "title_b": "MemEye: A Visual-Centric Evaluation Framework for Multimodal Agent Memory",
+      "claim_a": "Pelican-Unified 1.0, a unified embodied intelligence model, achieves strong performance across understanding, reasoning, imagination, and action capabilities without compromising specialist strength",
+      "claim_b": "Current architectures struggle to preserve fine-grained visual details and reason about state changes over time in long-term multimodal agent memory",
+      "cluster": 0,
+      "verdict": "disagree",
+      "confidence": "medium",
+      "reason": "Claim A suggests a unified model achieves strong performance across various capabilities, while Claim B implies current architectures, potentially including unified models like Pelican-Unified 1.0, struggle with specific aspects of multimodal memory."
+    },
+    {
+      "a": "2605.15131v1",
+      "b": "2605.15198v1",
+      "title_a": "Natural Synthesis: Outperforming Reactive Synthesis Tools with Large Reasoning Models",
+      "title_b": "ATLAS: Agentic or Latent Visual Reasoning? One Word is Enough for Both",
+      "claim_a": "A neuro-symbolic approach to reactive synthesis, combining large reasoning models with model checkers, can outperform dedicated tools in solving benchmarks and constructing parameterized systems.",
+      "claim_b": "ATLAS, a framework using a single discrete 'word' as both an agentic operation and a latent visual reasoning unit, achieves superior performance on challenging visual reasoning benchmarks while maintaining interpretability",
+      "cluster": 0,
+      "verdict": "unrelated",
+      "confidence": "high",
+      "reason": "The two claims are about different topics, one focusing on reactive synthesis and the other on visual reasoning, making a direct comparison between them meaningless."
+    },
+    {
+      "a": "2605.15128v1",
+      "b": "2605.15198v1",
+      "title_a": "MemEye: A Visual-Centric Evaluation Framework for Multimodal Agent Memory",
+      "title_b": "ATLAS: Agentic or Latent Visual Reasoning? One Word is Enough for Both",
+      "claim_a": "Current architectures struggle to preserve fine-grained visual details and reason about state changes over time in long-term multimodal agent memory",
+      "claim_b": "ATLAS, a framework using a single discrete 'word' as both an agentic operation and a latent visual reasoning unit, achieves superior performance on challenging visual reasoning benchmarks while maintaining interpretability",
+      "cluster": 0,
+      "verdict": "unrelated",
+      "confidence": "high",
+      "reason": "Claim A discusses the limitations of current architectures in preserving visual details in multimodal agent memory, while Claim B presents a framework for visual reasoning with a focus on performance and interpretability, addressing different aspects of AI research."
+    },
+    {
+      "a": "2605.15040v1",
+      "b": "2605.15128v1",
+      "title_a": "Orchard: An Open-Source Agentic Modeling Framework",
+      "title_b": "MemEye: A Visual-Centric Evaluation Framework for Multimodal Agent Memory",
+      "claim_a": "Orchard, an open-source framework for scalable agentic modeling, achieves state-of-the-art results in various domains, including coding agents, vision-language computer-use agents, and personal assistant agents, using reusable primitives and lightweight environment services",
+      "claim_b": "Current architectures struggle to preserve fine-grained visual details and reason about state changes over time in long-term multimodal agent memory",
+      "cluster": 0,
+      "verdict": "disagree",
+      "confidence": "medium",
+      "reason": "Claim A suggests that Orchard achieves state-of-the-art results in various domains, while Claim B implies that current architectures, potentially including Orchard, struggle with certain aspects of multimodal agent memory."
+    },
+    {
+      "a": "2605.15196v1",
+      "b": "2605.15050v1",
+      "title_a": "RefDecoder: Enhancing Visual Generation with Conditional Video Decoding",
+      "title_b": "Separating Intrinsic Ambiguity from Estimation Uncertainty in Deep Generative Models for Linear Inverse Problems",
+      "claim_a": "RefDecoder, a reference-conditioned video VAE decoder, achieves consistent improvements in video generation quality, with up to +2.1dB PSNR over unconditional baselines, by injecting high-fidelity reference image signals into the decoding process",
+      "claim_b": "Deep generative models can be decomposed to separate intrinsic ambiguity from estimation uncertainty in linear inverse problems, enabling more accurate interpretation of posterior uncertainty",
+      "cluster": 1,
+      "verdict": "unrelated",
+      "confidence": "high",
+      "reason": "Claim A focuses on video generation quality using a specific decoder, while Claim B discusses the separation of ambiguity and uncertainty in deep generative models for linear inverse problems, which are distinct topics."
+    },
+    {
+      "a": "2605.15154v1",
+      "b": "2605.15085v1",
+      "title_a": "RoSHAP: A Distributional Framework and Robust Metric for Stable Feature Attribution",
+      "title_b": "From Data to Action: Accelerating Refinery Optimization with AI",
+      "claim_a": "Incorporating the stochastic nature of feature attribution into a distributional framework and using the RoSHAP metric leads to more stable and reliable feature rankings in machine learning models.",
+      "claim_b": "Integrating machine learning approaches, such as Anomaly Detection tools, with Linear Programming solutions can reveal business opportunities and data supply errors in refinery optimization",
+      "cluster": 1,
+      "verdict": "unrelated",
+      "confidence": "high",
+      "reason": "The two claims are about different topics, one focusing on feature attribution in machine learning models and the other on refinery optimization using AI and Linear Programming."
+    },
+    {
+      "a": "2605.15134v1",
+      "b": "2605.15083v1",
+      "title_a": "Training ML Models with Predictable Failures",
+      "title_b": "Novel Dynamic Batch-Sensitive Adam Optimiser for Vehicular Accident Injury Severity Prediction",
+      "claim_a": "Fine-tuning ML models with a forecastability loss objective substantially reduces held-out forecast error while preserving primary-task capability and achieving safety similar to supervised baselines",
+      "claim_b": "Dynamic Batch-Sensitive Adam (DBS-Adam) optimiser outperforms state-of-the-art optimisers in accident injury severity prediction, achieving 95.22% test accuracy and statistically significant precision improvements",
+      "cluster": 1,
+      "verdict": "unrelated",
+      "confidence": "high",
+      "reason": "The two claims are about different topics, one focusing on fine-tuning ML models for predictable failures and the other on a novel optimizer for vehicular accident injury severity prediction."
+    },
+    {
+      "a": "2605.15085v1",
+      "b": "2605.15134v1",
+      "title_a": "From Data to Action: Accelerating Refinery Optimization with AI",
+      "title_b": "Training ML Models with Predictable Failures",
+      "claim_a": "Integrating machine learning approaches, such as Anomaly Detection tools, with Linear Programming solutions can reveal business opportunities and data supply errors in refinery optimization",
+      "claim_b": "Fine-tuning ML models with a forecastability loss objective substantially reduces held-out forecast error while preserving primary-task capability and achieving safety similar to supervised baselines",
+      "cluster": 1,
+      "verdict": "unrelated",
+      "confidence": "high",
+      "reason": "Claim A discusses the integration of machine learning with linear programming for refinery optimization, while Claim B focuses on training ML models with predictable failures, which are distinct topics with no direct relationship."
+    },
+    {
+      "a": "2605.15082v1",
+      "b": "2605.15035v1",
+      "title_a": "Average Gradient Outer Product in kernel regression provably recovers the central subspace for multi-index models",
+      "title_b": "TopoPrimer: The Missing Topological Context in Forecasting Models",
+      "claim_a": "The Average Gradient Outer Product of a kernel ridge regression model provably recovers the central subspace of a multi-index polynomial function, even with a limited number of samples.",
+      "claim_b": "TopoPrimer, a framework that incorporates global topological structure into forecasting models, improves accuracy by up to 7.3% MSE across diverse domains and stabilizes forecasts under seasonal demand spikes",
+      "cluster": 1,
+      "verdict": "unrelated",
+      "confidence": "high",
+      "reason": "The two claims are about different topics, one focusing on kernel regression and central subspace recovery, and the other on forecasting models and topological structure."
+    },
+    {
+      "a": "2605.15050v1",
+      "b": "2605.15134v1",
+      "title_a": "Separating Intrinsic Ambiguity from Estimation Uncertainty in Deep Generative Models for Linear Inverse Problems",
+      "title_b": "Training ML Models with Predictable Failures",
+      "claim_a": "Deep generative models can be decomposed to separate intrinsic ambiguity from estimation uncertainty in linear inverse problems, enabling more accurate interpretation of posterior uncertainty",
+      "claim_b": "Fine-tuning ML models with a forecastability loss objective substantially reduces held-out forecast error while preserving primary-task capability and achieving safety similar to supervised baselines",
+      "cluster": 1,
+      "verdict": "unrelated",
+      "confidence": "high",
+      "reason": "The two claims are about different topics, one focusing on decomposing uncertainty in deep generative models for linear inverse problems and the other on training ML models with predictable failures, making a direct comparison meaningless."
+    },
+    {
+      "a": "2605.15035v1",
+      "b": "2605.15134v1",
+      "title_a": "TopoPrimer: The Missing Topological Context in Forecasting Models",
+      "title_b": "Training ML Models with Predictable Failures",
+      "claim_a": "TopoPrimer, a framework that incorporates global topological structure into forecasting models, improves accuracy by up to 7.3% MSE across diverse domains and stabilizes forecasts under seasonal demand spikes",
+      "claim_b": "Fine-tuning ML models with a forecastability loss objective substantially reduces held-out forecast error while preserving primary-task capability and achieving safety similar to supervised baselines",
+      "cluster": 1,
+      "verdict": "agree",
+      "confidence": "medium",
+      "reason": "Both claims suggest that incorporating additional context or objectives into forecasting models can improve their accuracy and stability, although they propose different methods to achieve this goal."
+    },
+    {
+      "a": "2605.15179v1",
+      "b": "2605.15055v1",
+      "title_a": "Eradicating Negative Transfer in Multi-Physics Foundation Models via Sparse Mixture-of-Experts Routing",
+      "title_b": "DiffusionOPD: A Unified Perspective of On-Policy Distillation in Diffusion Models",
+      "claim_a": "Sparse mixture-of-experts routing can effectively mitigate negative transfer in multi-physics foundation models, enabling simultaneous convergence across disparate physical regimes.",
+      "claim_b": "DiffusionOPD, a multi-task training paradigm for diffusion models based on Online Policy Distillation, consistently surpasses existing methods in training efficiency and final performance across various benchmarks.",
+      "cluster": 2,
+      "verdict": "unrelated",
+      "confidence": "high",
+      "reason": "The two claims are about different topics, one focusing on mitigating negative transfer in multi-physics foundation models and the other on a multi-task training paradigm for diffusion models."
+    },
+    {
+      "a": "2605.15155v1",
+      "b": "2605.15113v1",
+      "title_a": "Self-Distilled Agentic Reinforcement Learning",
+      "title_b": "Learning from Language Feedback via Variational Policy Distillation",
+      "claim_a": "Self-Distilled Agentic Reinforcement Learning (SDAR) substantially improves over existing reinforcement learning methods by introducing a gated auxiliary objective that stabilizes supervision and strengthens distillation on positive-gap tokens",
+      "claim_b": "Variational Policy Distillation (VPD) overcomes the limitations of passive distillation by co-evolving both teacher and student policies, leading to improved performance on complex reasoning tasks",
+      "cluster": 2,
+      "verdict": "unrelated",
+      "confidence": "high",
+      "reason": "The two claims discuss different reinforcement learning methods, SDAR and VPD, with distinct approaches and objectives, making a direct comparison or conclusion between them meaningless."
+    },
+    {
+      "a": "2605.15133v1",
+      "b": "2605.15155v1",
+      "title_a": "Causal Foundation Models with Continuous Treatments",
+      "title_b": "Self-Distilled Agentic Reinforcement Learning",
+      "claim_a": "A novel causal foundation model can predict causal effects across a wide variety of unseen tasks in the continuous treatment setting without additional training or fine-tuning",
+      "claim_b": "Self-Distilled Agentic Reinforcement Learning (SDAR) substantially improves over existing reinforcement learning methods by introducing a gated auxiliary objective that stabilizes supervision and strengthens distillation on positive-gap tokens",
+      "cluster": 2,
+      "verdict": "unrelated",
+      "confidence": "high",
+      "reason": "The two claims are about different topics, one focusing on causal foundation models for continuous treatment settings and the other on reinforcement learning methods, making a direct comparison meaningless."
+    },
+    {
+      "a": "2605.15055v1",
+      "b": "2605.15155v1",
+      "title_a": "DiffusionOPD: A Unified Perspective of On-Policy Distillation in Diffusion Models",
+      "title_b": "Self-Distilled Agentic Reinforcement Learning",
+      "claim_a": "DiffusionOPD, a multi-task training paradigm for diffusion models based on Online Policy Distillation, consistently surpasses existing methods in training efficiency and final performance across various benchmarks.",
+      "claim_b": "Self-Distilled Agentic Reinforcement Learning (SDAR) substantially improves over existing reinforcement learning methods by introducing a gated auxiliary objective that stabilizes supervision and strengthens distillation on positive-gap tokens",
+      "cluster": 2,
+      "verdict": "unrelated",
+      "confidence": "high",
+      "reason": "The claims are about different topics, one focusing on diffusion models and on-policy distillation, and the other on reinforcement learning with self-distillation."
+    },
+    {
+      "a": "2605.15183v1",
+      "b": "2605.15081v1",
+      "title_a": "When Are Two Networks the Same? Tensor Similarity for Mechanistic Interpretability",
+      "title_b": "ML-Embed: Inclusive and Efficient Embeddings for a Multilingual World",
+      "claim_a": "Tensor similarity, a weight-based metric, can accurately capture global functional equivalence between tensor-based models, invariant to weight-space symmetries and accounting for cross-layer mechanisms.",
+      "claim_b": "ML-Embed, a suite of models built upon the 3-Dimensional Matryoshka Learning framework, sets new records on 9 of 17 evaluated MTEB benchmarks and achieves strong results in low-resource languages",
+      "cluster": 3,
+      "verdict": "unrelated",
+      "confidence": "high",
+      "reason": "Claim A discusses tensor similarity for mechanistic interpretability in tensor-based models, while Claim B presents a multilingual embedding model with state-of-the-art results, and there is no direct connection between the two claims."
+    },
+    {
+      "a": "2605.15172v1",
+      "b": "2605.15051v1",
+      "title_a": "MetaBackdoor: Exploiting Positional Encoding as a Backdoor Attack Surface in LLMs",
+      "title_b": "An Interpretable Latency Model for Speculative Decoding in LLM Serving",
+      "claim_a": "Positional encoding in Transformer-based large language models can be exploited as a backdoor attack surface using length-based triggers without modifying the input text.",
+      "claim_b": "Speculative decoding in large language model serving systems can be accurately modeled using a simple and interpretable latency model that accounts for load-independent and load-dependent components",
+      "cluster": 3,
+      "verdict": "unrelated",
+      "confidence": "high",
+      "reason": "The two claims are about different topics, one focusing on backdoor attacks in LLMs and the other on latency modeling in LLM serving systems."
+    },
+    {
+      "a": "2605.15168v1",
+      "b": "2605.15138v1",
+      "title_a": "Text Knows What, Tables Know When: Clinical Timeline Reconstruction via Retrieval-Augmented Multimodal Alignment",
+      "title_b": "Forgetting That Sticks: Quantization-Permanent Unlearning via Circuit Attribution",
+      "claim_a": "A retrieval-augmented multimodal alignment framework can improve the temporal precision of clinical timelines by combining unstructured clinical narratives with structured electronic health record data",
+      "claim_b": "MANSU is the first method to achieve meaningful forgetting, retain preservation, non-positive PTQ gap, and structural erasure across multiple model families and hazard benchmarks, outperforming gradient-based baselines under compression.",
+      "cluster": 3,
+      "verdict": "unrelated",
+      "confidence": "high",
+      "reason": "The two claims are about different topics, one related to clinical timeline reconstruction and the other to machine learning model unlearning, making comparison meaningless."
+    },
+    {
+      "a": "2605.15156v1",
+      "b": "2605.15100v1",
+      "title_a": "MeMo: Memory as a Model",
+      "title_b": "Dual-Dimensional Consistency: Balancing Budget and Quality in Adaptive Inference-Time Scaling",
+      "claim_a": "MeMo, a modular framework, enables efficient incorporation of new knowledge into large language models without modifying their parameters or requiring access to their weights or output logits.",
+      "claim_b": "Dual-Dimensional Consistency (DDC) reduces token consumption by over 10 times while maintaining or exceeding the accuracy of strong baselines across various Large Language Models (LLMs)",
+      "cluster": 3,
+      "verdict": "unrelated",
+      "confidence": "high",
+      "reason": "Claim A focuses on incorporating new knowledge into large language models, while Claim B discusses reducing token consumption in adaptive inference-time scaling, which are distinct topics in natural language processing."
+    },
+    {
+      "a": "2605.15138v1",
+      "b": "2605.15156v1",
+      "title_a": "Forgetting That Sticks: Quantization-Permanent Unlearning via Circuit Attribution",
+      "title_b": "MeMo: Memory as a Model",
+      "claim_a": "MANSU is the first method to achieve meaningful forgetting, retain preservation, non-positive PTQ gap, and structural erasure across multiple model families and hazard benchmarks, outperforming gradient-based baselines under compression.",
+      "claim_b": "MeMo, a modular framework, enables efficient incorporation of new knowledge into large language models without modifying their parameters or requiring access to their weights or output logits.",
+      "cluster": 3,
+      "verdict": "unrelated",
+      "confidence": "high",
+      "reason": "Claim A discusses a method for achieving meaningful forgetting in machine learning models, while Claim B presents a framework for incorporating new knowledge into large language models, representing distinct research topics."
+    },
+    {
+      "a": "2605.15110v1",
+      "b": "2605.15100v1",
+      "title_a": "Proposal and study of statistical features for string similarity computation and classification",
+      "title_b": "Dual-Dimensional Consistency: Balancing Budget and Quality in Adaptive Inference-Time Scaling",
+      "claim_a": "Co-occurrence matrix and run-length matrix features outperform state-of-the-art statistical features in string similarity computation and classification tasks",
+      "claim_b": "Dual-Dimensional Consistency (DDC) reduces token consumption by over 10 times while maintaining or exceeding the accuracy of strong baselines across various Large Language Models (LLMs)",
+      "cluster": 3,
+      "verdict": "unrelated",
+      "confidence": "high",
+      "reason": "Claim A focuses on statistical features for string similarity computation and classification, while Claim B discusses a method for reducing token consumption in Large Language Models, making them unrelated topics."
+    },
+    {
+      "a": "2605.15104v1",
+      "b": "2605.15044v1",
+      "title_a": "From Text to Voice: A Reproducible and Verifiable Framework for Evaluating Tool Calling LLM Agents",
+      "title_b": "SpeakerLLM: A Speaker-Specialized Audio-LLM for Speaker Understanding and Verification Reasoning",
+      "claim_a": "A dataset-agnostic framework can convert verified text benchmarks into controlled audio-based tool calling evaluations without re-annotating the tool schema and gold labels, with model performance being strongly model- and task-dependent",
+      "claim_b": "SpeakerLLM, a speaker-specialized audio-LLM framework, improves speaker-profile and recording-condition understanding over general audio-LLMs and achieves strong generated-verdict accuracy in speaker verification tasks",
+      "cluster": 3,
+      "verdict": "unrelated",
+      "confidence": "high",
+      "reason": "Claim A focuses on evaluating tool calling LLM agents using a dataset-agnostic framework, while Claim B discusses a speaker-specialized audio-LLM framework for speaker understanding and verification, indicating distinct research topics."
+    },
+    {
+      "a": "2605.15102v1",
+      "b": "2605.15156v1",
+      "title_a": "Improving Multi-turn Dialogue Consistency with Self-Recall Thinking",
+      "title_b": "MeMo: Memory as a Model",
+      "claim_a": "Self-Recall Thinking (SRT) improves multi-turn dialogue consistency by selectively recalling and reasoning over context during inference, resulting in a 4.7% increase in F1 score and 14.7% reduction in end-to-end latency",
+      "claim_b": "MeMo, a modular framework, enables efficient incorporation of new knowledge into large language models without modifying their parameters or requiring access to their weights or output logits.",
+      "cluster": 3,
+      "verdict": "unrelated",
+      "confidence": "high",
+      "reason": "The two claims discuss different topics, one focusing on improving dialogue consistency with a specific technique and the other on a framework for incorporating new knowledge into language models."
+    },
+    {
+      "a": "2605.15081v1",
+      "b": "2605.15156v1",
+      "title_a": "ML-Embed: Inclusive and Efficient Embeddings for a Multilingual World",
+      "title_b": "MeMo: Memory as a Model",
+      "claim_a": "ML-Embed, a suite of models built upon the 3-Dimensional Matryoshka Learning framework, sets new records on 9 of 17 evaluated MTEB benchmarks and achieves strong results in low-resource languages",
+      "claim_b": "MeMo, a modular framework, enables efficient incorporation of new knowledge into large language models without modifying their parameters or requiring access to their weights or output logits.",
+      "cluster": 3,
+      "verdict": "unrelated",
+      "confidence": "high",
+      "reason": "The two claims discuss different topics, one focusing on multilingual embeddings and the other on a framework for incorporating new knowledge into large language models."
+    },
+    {
+      "a": "2605.15077v1",
+      "b": "2605.15026v1",
+      "title_a": "Concurrency without Model Changes: Future-based Asynchronous Function Calling for LLMs",
+      "title_b": "SemaTune: Semantic-Aware Online OS Tuning with Large Language Models",
+      "claim_a": "AsyncFC, a pure execution-layer framework, significantly reduces end-to-end task completion time in LLMs without requiring model changes or fine-tuning",
+      "claim_b": "SemaTune, a semantic-aware online OS tuning framework, improves stable-phase performance by 72.5% over default settings and by 153.3% relative to the strongest non-LLM baseline across 13 live workloads from five benchmark suites.",
+      "cluster": 3,
+      "verdict": "unrelated",
+      "confidence": "high",
+      "reason": "The two claims discuss different approaches to improving performance, one focusing on asynchronous function calling for LLMs and the other on semantic-aware OS tuning, with no direct comparison or contradiction between them."
+    },
+    {
+      "a": "2605.15051v1",
+      "b": "2605.15100v1",
+      "title_a": "An Interpretable Latency Model for Speculative Decoding in LLM Serving",
+      "title_b": "Dual-Dimensional Consistency: Balancing Budget and Quality in Adaptive Inference-Time Scaling",
+      "claim_a": "Speculative decoding in large language model serving systems can be accurately modeled using a simple and interpretable latency model that accounts for load-independent and load-dependent components",
+      "claim_b": "Dual-Dimensional Consistency (DDC) reduces token consumption by over 10 times while maintaining or exceeding the accuracy of strong baselines across various Large Language Models (LLMs)",
+      "cluster": 3,
+      "verdict": "unrelated",
+      "confidence": "high",
+      "reason": "Claim A focuses on modeling latency in speculative decoding for LLM serving, while Claim B discusses a method to balance budget and quality in adaptive inference-time scaling, which are distinct topics."
+    },
+    {
+      "a": "2605.15041v1",
+      "b": "2605.15156v1",
+      "title_a": "Case-Based Calibration of Adaptive Reasoning and Execution for LLM Tool Use",
+      "title_b": "MeMo: Memory as a Model",
+      "claim_a": "CAST, a case-driven framework, improves large language model tool use by increasing execution accuracy up to 5.85 percentage points and reducing average reasoning length by 26% through adaptive reasoning and case-based calibration.",
+      "claim_b": "MeMo, a modular framework, enables efficient incorporation of new knowledge into large language models without modifying their parameters or requiring access to their weights or output logits.",
+      "cluster": 3,
+      "verdict": "unrelated",
+      "confidence": "high",
+      "reason": "The two claims discuss different aspects of large language models, with Claim A focusing on improving tool use through adaptive reasoning and case-based calibration, and Claim B focusing on incorporating new knowledge into models without modifying their parameters."
+    },
+    {
+      "a": "2605.15177v1",
+      "b": "2605.15118v1",
+      "title_a": "OpenDeepThink: Parallel Reasoning via Bradley--Terry Aggregation",
+      "title_b": "Talk is (Not) Cheap: A Taxonomy and Benchmark Coverage Audit for LLM Attacks",
+      "claim_a": "OpenDeepThink, a population-based test-time compute framework, raises Gemini 3.1 Pro's effective Codeforces Elo by +405 points in eight sequential LLM-call rounds",
+      "claim_b": "Current LLM attack benchmarks cover at most 25% of the threat surface, with entire STRIDE threat categories lacking standardized evaluation despite published attacks achieving high success rates.",
+      "cluster": 4,
+      "verdict": "unrelated",
+      "confidence": "high",
+      "reason": "The two claims discuss different topics, one focusing on the performance enhancement of a specific framework and the other on the coverage of LLM attack benchmarks."
+    },
+    {
+      "a": "2605.15152v1",
+      "b": "2605.15118v1",
+      "title_a": "Widening the Gap: Exploiting LLM Quantization via Outlier Injection",
+      "title_b": "Talk is (Not) Cheap: A Taxonomy and Benchmark Coverage Audit for LLM Attacks",
+      "claim_a": "A novel quantization-conditioned attack can induce malicious behavior in large language models by injecting outliers into specific weight blocks, causing a targeted weight collapse after quantization with various advanced techniques",
+      "claim_b": "Current LLM attack benchmarks cover at most 25% of the threat surface, with entire STRIDE threat categories lacking standardized evaluation despite published attacks achieving high success rates.",
+      "cluster": 4,
+      "verdict": "unrelated",
+      "confidence": "high",
+      "reason": "Claim A discusses a specific attack method on large language models, while Claim B talks about the coverage and taxonomy of LLM attack benchmarks, making them unrelated topics."
+    },
+    {
+      "a": "2605.15118v1",
+      "b": "2605.15030v1",
+      "title_a": "Talk is (Not) Cheap: A Taxonomy and Benchmark Coverage Audit for LLM Attacks",
+      "title_b": "WARD: Adversarially Robust Defense of Web Agents Against Prompt Injections",
+      "claim_a": "Current LLM attack benchmarks cover at most 25% of the threat surface, with entire STRIDE threat categories lacking standardized evaluation despite published attacks achieving high success rates.",
+      "claim_b": "WARD achieves nearly perfect recall on out-of-distribution benchmarks and remains robust against guard-targeted and adaptive attacks under substantial distribution shifts.",
+      "cluster": 4,
+      "verdict": "unrelated",
+      "confidence": "high",
+      "reason": "Claim A discusses the coverage of LLM attack benchmarks, while Claim B presents the effectiveness of a specific defense mechanism against prompt injections, making them distinct topics."
+    },
+    {
+      "a": "2605.15171v1",
+      "b": "2605.15164v1",
+      "title_a": "Evidential Reasoning Advances Interpretable Real-World Disease Screening",
+      "title_b": "Position: Behavioural Assurance Cannot Verify the Safety Claims Governance Now Demands",
+      "claim_a": "EviScreen, an evidential reasoning framework, enhances disease screening performance by leveraging region-level evidence from historical cases and providing transparent reasoning pathways",
+      "claim_b": "Current assurance methodologies, such as behavioural evaluations and red-teaming, cannot verify the safety claims required by AI governance frameworks due to their limitations in verifying latent representations or long-horizon agentic behaviours",
+      "cluster": 5,
+      "verdict": "unrelated",
+      "confidence": "high",
+      "reason": "The two claims are about different topics, one focusing on disease screening using evidential reasoning and the other on the limitations of assurance methodologies in verifying safety claims for AI governance."
+    }
+  ],
+  "cluster_labels": {
+    "0": "Artificial Intelligence Models",
+    "1": "Machine Learning Advances",
+    "2": "Advanced Reinforcement Learning Methods",
+    "3": "Artificial Intelligence Models Analysis",
+    "4": "Artificial Intelligence Security Research",
+    "5": "AI Safety and Limitations"
+  },
+  "stats": {
+    "total_pairs": 38,
+    "agreements": 1,
+    "contradictions": 2,
+    "unrelated": 31,
+    "skipped": 4
+  }
+}
