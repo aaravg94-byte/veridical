@@ -9,7 +9,7 @@ from sentence_transformers import SentenceTransformer
 from sklearn.cluster import KMeans
 from sklearn.metrics.pairwise import cosine_similarity
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder=".", static_url_path="")
 CORS(app)
 
 GROQ_API_KEY = os.environ.get("GROQ_API_KEY")
@@ -223,6 +223,9 @@ def analyze():
 def health():
     return jsonify({"status": "ok"})
 
+@app.route("/")
+def index():
+    return app.send_static_file("index.html")
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5001))
