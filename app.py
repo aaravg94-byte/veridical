@@ -123,7 +123,7 @@ def analyze():
                 p["methodology"] = result.get("methodology", "")
                 p["confidence"]  = result.get("confidence", "")
                 valid.append(p)
-                time.sleep(2)
+                time.sleep(0.5)
             except Exception:
                 continue
 
@@ -179,7 +179,7 @@ def analyze():
                         "title_b": valid[j]["title"],
                         "reason": reason,
                     })
-                time.sleep(2)
+                time.sleep(0.5)
             except Exception:
                 continue
 
