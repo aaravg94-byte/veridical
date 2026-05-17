@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Veridical — Research Intelligence</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:       #0a0a0b;
+      --bg2:      #111114;
+      --bg3:      #1a1a1f;
+      --border:   #2a2a32;
+      --text:     #e8e8ee;
+      --muted:    #6b6b7a;
+      --accent:   #c8f07a;
+      --accent2:  #7af0c8;
+      --red:      #f07a7a;
+      --serif:    'DM Serif Display', Georgia, serif;
+      --mono:     'DM Mono', monospace;
+      --sans:     'DM Sans', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      font-weight: 300;
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+
+    /* ── Header ── */
+    header {
+      padding: 2rem 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .logo {
+      font-family: var(--serif);
+      font-size: 1.4rem;
+      letter-spacing: 0.02em;
+      color: var(--text);
+    }
+
+    .logo span { color: var(--accent); }
+
+    .nav-links { display: flex; gap: 2rem; }
+    .nav-links a {
+      font-size: 0.8rem;
+      font-family: var(--mono);
+      color: var(--muted);
+      text-decoration: none;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--text); }
+
+    /* ── Hero ── */
+    .hero {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 7rem 2rem 4rem;
+      text-align: center;
+    }
+
+    .eyebrow {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+      opacity: 0;
+      animation: fadeUp 0.6s ease forwards;
+    }
+
+    .hero h1 {
+      font-family: var(--serif);
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+      opacity: 0;
+      animation: fadeUp 0.6s ease 0.1s forwards;
+    }
+
+    .hero h1 em {
+      font-style: italic;
+      color: var(--accent);
+    }
+
+    .hero p {
+      font-size: 1.05rem;
+      color: var(--muted);
+      max-width: 520px;
+      margin: 0 auto 3rem;
+      opacity: 0;
+      animation: fadeUp 0.6s ease 0.2s forwards;
+    }
+
+    /* ── Search box ── */
+    .search-wrap {
+      opacity: 0;
+      animation: fadeUp 0.6s ease 0.3s forwards;
+    }
+
+    .search-box {
+      display: flex;
+      gap: 0;
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      overflow: hidden;
+      transition: border-color 0.2s;
+      max-width: 620px;
+      margin: 0 auto;
+    }
+
+    .search-box:focus-within { border-color: var(--accent); }
+
+    .search-box input {
+      flex: 1;
+      background: transparent;
+      border: none;
+      outline: none;
+      padding: 1rem 1.25rem;
+      font-size: 0.95rem;
+      font-family: var(--sans);
+      font-weight: 300;
+      color: var(--text);
+    }
+
+    .search-box input::placeholder { color: var(--muted); }
+
+    .search-box button {
+      background: var(--accent);
+      border: none;
+      padding: 1rem 1.75rem;
+      font-family: var(--mono);
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #0a0a0b;
+      cursor: pointer;
+      transition: opacity 0.2s;
+      white-space: nowrap;
+    }
+
+    .search-box button:hover { opacity: 0.85; }
+    .search-box button:disabled { opacity: 0.4; cursor: not-allowed; }
+
+    .examples {
+      margin-top: 1rem;
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .example-pill {
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      padding: 4px 12px;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      color: var(--muted);
+      cursor: pointer;
+      transition: all 0.15s;
+      background: transparent;
+    }
+
+    .example-pill:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    /* ── Loading ── */
+    .loading {
+      display: none;
+      text-align: center;
+      padding: 4rem 2rem;
+    }
+
+    .loading-bar {
+      width: 200px;
+      height: 2px;
+      background: var(--border);
+      border-radius: 2px;
+      margin: 0 auto 1.5rem;
+      overflow: hidden;
+    }
+
+    .loading-bar-inner {
+      height: 100%;
+      background: var(--accent);
+      border-radius: 2px;
+      animation: loading 2s ease infinite;
+    }
+
+    @keyframes loading {
+      0% { width: 0%; margin-left: 0; }
+      50% { width: 60%; margin-left: 20%; }
+      100% { width: 0%; margin-left: 100%; }
+    }
+
+    .loading-text {
+      font-family: var(--mono);
+      font-size: 0.78rem;
+      color: var(--muted);
+      letter-spacing: 0.08em;
+    }
+
+    .loading-steps { margin-top: 1rem; }
+    .loading-step {
+      font-size: 0.78rem;
+      color: var(--muted);
+      padding: 3px 0;
+      transition: color 0.3s;
+    }
+    .loading-step.active { color: var(--accent); }
+    .loading-step.done { color: var(--muted); text-decoration: line-through; }
+
+    /* ── Error ── */
+    .error-box {
+      display: none;
+      max-width: 600px;
+      margin: 2rem auto;
+      background: #1a1014;
+      border: 1px solid var(--red);
+      border-radius: 6px;
+      padding: 1rem 1.25rem;
+      font-family: var(--mono);
+      font-size: 0.82rem;
+      color: var(--red);
+    }
+
+    /* ── Results ── */
+    .results {
+      display: none;
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 2rem 6rem;
+    }
+
+    .results-header {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 2rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .results-meta {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      color: var(--muted);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+    }
+
+    .results-title {
+      font-family: var(--serif);
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .stat-row {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .stat {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .stat-val {
+      font-family: var(--serif);
+      font-size: 1.8rem;
+      color: var(--accent);
+      line-height: 1;
+    }
+
+    .stat-label {
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      color: var(--muted);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-top: 3px;
+    }
+
+    /* Sections */
+    .section { margin-bottom: 3rem; }
+
+    .section-label {
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .summary-text {
+      font-size: 1rem;
+      line-height: 1.8;
+      color: var(--text);
+    }
+
+    /* Verdict */
+    .verdict-card {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--accent);
+      border-radius: 6px;
+      padding: 1.25rem 1.5rem;
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+
+    /* Clusters */
+    .cluster-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+      gap: 1rem;
+    }
+
+    .cluster-card {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 1.25rem;
+    }
+
+    .cluster-title {
+      font-family: var(--mono);
+      font-size: 0.78rem;
+      color: var(--accent2);
+      letter-spacing: 0.06em;
+      margin-bottom: 0.75rem;
+    }
+
+    .cluster-paper {
+      padding: 0.6rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .cluster-paper:last-child { border-bottom: none; }
+
+    .cluster-paper a {
+      font-size: 0.82rem;
+      color: var(--text);
+      text-decoration: none;
+      display: block;
+      margin-bottom: 3px;
+    }
+
+    .cluster-paper a:hover { color: var(--accent); }
+
+    .cluster-paper-claim {
+      font-size: 0.75rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    /* Contradictions */
+    .contradiction-card {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--red);
+      border-radius: 6px;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .contradiction-card h4 {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      color: var(--red);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+    }
+
+    .claim-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .claim-block {
+      background: var(--bg3);
+      border-radius: 4px;
+      padding: 0.75rem;
+    }
+
+    .claim-block-label {
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 4px;
+    }
+
+    .claim-block-title {
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+
+    .claim-block-text {
+      font-size: 0.75rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .contradiction-reason {
+      font-size: 0.82rem;
+      color: var(--muted);
+      font-style: italic;
+    }
+
+    .no-contradictions {
+      font-family: var(--mono);
+      font-size: 0.82rem;
+      color: var(--muted);
+      padding: 1rem;
+      background: var(--bg2);
+      border-radius: 6px;
+      border: 1px solid var(--border);
+    }
+
+    /* Reset button */
+    .reset-btn {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      background: transparent;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 6px 14px;
+      cursor: pointer;
+      transition: all 0.15s;
+      margin-bottom: 2.5rem;
+    }
+
+    .reset-btn:hover { color: var(--text); border-color: var(--text); }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      header { padding: 1.25rem 1.5rem; }
+      .nav-links { display: none; }
+      .hero { padding: 4rem 1.5rem 3rem; }
+      .claim-row { grid-template-columns: 1fr; }
+      .cluster-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">Veridical<span>.</span></div>
+  <nav class="nav-links">
+    <a href="https://github.com/aaravg94-byte/veridical" target="_blank">GitHub</a>
+    <a href="#how">How it works</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="eyebrow">AI Research Intelligence</div>
+    <h1>What does science <em>actually</em> say?</h1>
+    <p>Enter any research topic. Veridical analyzes recent papers, extracts claims, detects contradictions, and tells you what's settled — and what isn't.</p>
+
+    <div class="search-wrap">
+      <div class="search-box">
+        <input type="text" id="topic-input" placeholder="e.g. transformer attention mechanisms..." />
+        <button id="analyze-btn" onclick="analyze()">Analyze →</button>
+      </div>
+      <div class="examples">
+        <button class="example-pill" onclick="setTopic('LLM reasoning')">LLM reasoning</button>
+        <button class="example-pill" onclick="setTopic('CRISPR gene editing')">CRISPR gene editing</button>
+        <button class="example-pill" onclick="setTopic('diffusion models image generation')">Diffusion models</button>
+        <button class="example-pill" onclick="setTopic('reinforcement learning from human feedback')">RLHF</button>
+      </div>
+    </div>
+  </section>
+
+  <div class="loading" id="loading">
+    <div class="loading-bar"><div class="loading-bar-inner"></div></div>
+    <div class="loading-text">Analyzing research...</div>
+    <div class="loading-steps" id="loading-steps"></div>
+  </div>
+
+  <div class="error-box" id="error-box"></div>
+
+  <section class="results" id="results">
+    <button class="reset-btn" onclick="reset()">← New search</button>
+
+    <div class="results-header">
+      <div class="results-meta" id="results-meta"></div>
+      <div class="results-title" id="results-title"></div>
+      <div class="stat-row" id="stat-row"></div>
+    </div>
+
+    <div class="section">
+      <div class="section-label">Executive Summary</div>
+      <div class="summary-text" id="summary-text"></div>
+    </div>
+
+    <div class="section">
+      <div class="section-label">Field Verdict</div>
+      <div class="verdict-card" id="verdict-card"></div>
+    </div>
+
+    <div class="section">
+      <div class="section-label">Research Clusters</div>
+      <div class="cluster-grid" id="cluster-grid"></div>
+    </div>
+
+    <div class="section">
+      <div class="section-label">Contradictions Detected</div>
+      <div id="contradictions-wrap"></div>
+    </div>
+  </section>
+</main>
+
+<script>
+  // Point this to your Railway backend URL once deployed
+const API_BASE = "http://localhost:5001";
+
+  const steps = [
+    "Fetching papers from arXiv...",
+    "Extracting structured claims...",
+    "Embedding and clustering...",
+    "Detecting contradictions...",
+    "Generating synthesis...",
+  ];
+
+  function setTopic(t) {
+    document.getElementById("topic-input").value = t;
+    document.getElementById("topic-input").focus();
+  }
+
+  function showLoading() {
+    document.querySelector(".hero").style.display = "none";
+    document.getElementById("results").style.display = "none";
+    document.getElementById("error-box").style.display = "none";
+    document.getElementById("loading").style.display = "block";
+
+    const stepsEl = document.getElementById("loading-steps");
+    stepsEl.innerHTML = steps.map((s,i) => `<div class="loading-step" id="step-${i}">${s}</div>`).join("");
+
+    let i = 0;
+    const interval = setInterval(() => {
+      if (i > 0) document.getElementById(`step-${i-1}`).classList.replace("active","done");
+      if (i < steps.length) {
+        document.getElementById(`step-${i}`).classList.add("active");
+        i++;
+      } else {
+        clearInterval(interval);
+      }
+    }, 4000);
+
+    window._stepInterval = interval;
+  }
+
+  function hideLoading() {
+    clearInterval(window._stepInterval);
+    document.getElementById("loading").style.display = "none";
+  }
+
+  function reset() {
+    document.getElementById("results").style.display = "none";
+    document.querySelector(".hero").style.display = "block";
+    document.getElementById("topic-input").value = "";
+    document.getElementById("topic-input").focus();
+    window.scrollTo({top: 0, behavior: "smooth"});
+  }
+
+  async function analyze() {
+    const topic = document.getElementById("topic-input").value.trim();
+    if (!topic) return;
+
+    document.getElementById("analyze-btn").disabled = true;
+    showLoading();
+
+    try {
+      const res = await fetch(`${API_BASE}/api/analyze`, {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({topic}),
+      });
+
+      const data = await res.json();
+      hideLoading();
+
+      if (!res.ok) {
+        document.getElementById("error-box").textContent = "Error: " + (data.error || "Something went wrong.");
+        document.getElementById("error-box").style.display = "block";
+        document.querySelector(".hero").style.display = "block";
+        return;
+      }
+
+      renderResults(data);
+
+    } catch(err) {
+      hideLoading();
+      document.getElementById("error-box").textContent = "Could not connect to server. Make sure the backend is running.";
+      document.getElementById("error-box").style.display = "block";
+      document.querySelector(".hero").style.display = "block";
+    } finally {
+      document.getElementById("analyze-btn").disabled = false;
+    }
+  }
+
+  function renderResults(d) {
+    document.getElementById("results-meta").textContent =
+      `Veridical · ${new Date().toLocaleDateString("en-US",{month:"long",day:"numeric",year:"numeric"})}`;
+    document.getElementById("results-title").textContent = `State of the field: ${d.topic}`;
+    document.getElementById("stat-row").innerHTML = `
+      <div class="stat"><div class="stat-val">${d.paper_count}</div><div class="stat-label">Papers analyzed</div></div>
+      <div class="stat"><div class="stat-val">${d.clusters.length}</div><div class="stat-label">Topic clusters</div></div>
+      <div class="stat"><div class="stat-val">${d.contradictions.length}</div><div class="stat-label">Contradictions</div></div>
+      <div class="stat"><div class="stat-val">${d.agreements.length}</div><div class="stat-label">Agreements</div></div>
+    `;
+
+    document.getElementById("summary-text").textContent = d.summary;
+    document.getElementById("verdict-card").textContent = d.verdict;
+
+    // Clusters
+    document.getElementById("cluster-grid").innerHTML = d.clusters.map(c => `
+      <div class="cluster-card">
+        <div class="cluster-title">${c.label} · ${c.papers.length} papers</div>
+        ${c.papers.slice(0,4).map(p => `
+          <div class="cluster-paper">
+            <a href="${p.url}" target="_blank">${p.title}</a>
+            <div class="cluster-paper-claim">${p.claim}</div>
+          </div>
+        `).join("")}
+      </div>
+    `).join("");
+
+    // Contradictions
+    const cw = document.getElementById("contradictions-wrap");
+    if (d.contradictions.length === 0) {
+      cw.innerHTML = `<div class="no-contradictions">No direct contradictions detected in this paper set. Papers largely address distinct sub-problems.</div>`;
+    } else {
+      cw.innerHTML = d.contradictions.map(c => `
+        <div class="contradiction-card">
+          <h4>Contradiction detected</h4>
+          <div class="claim-row">
+            <div class="claim-block">
+              <div class="claim-block-label">Paper A</div>
+              <div class="claim-block-title">${c.title_a}</div>
+              <div class="claim-block-text">${c.claim_a}</div>
+            </div>
+            <div class="claim-block">
+              <div class="claim-block-label">Paper B</div>
+              <div class="claim-block-title">${c.title_b}</div>
+              <div class="claim-block-text">${c.claim_b}</div>
+            </div>
+          </div>
+          <div class="contradiction-reason">${c.reason}</div>
+        </div>
+      `).join("");
+    }
+
+    document.getElementById("results").style.display = "block";
+    window.scrollTo({top: 0, behavior: "smooth"});
+  }
+
+  document.getElementById("topic-input").addEventListener("keydown", e => {
+    if (e.key === "Enter") analyze();
+  });
+</script>
+
+</body>
+</html>
