@@ -5,7 +5,7 @@ import requests
 import numpy as np
 from flask import Flask, request, jsonify
 from flask_cors import CORS
-from sentence_transformers import SentenceTransformer
+from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.cluster import KMeans
 from sklearn.metrics.pairwise import cosine_similarity
 
@@ -15,8 +15,6 @@ CORS(app)
 GROQ_API_KEY = os.environ.get("GROQ_API_KEY")
 MODEL        = "llama-3.1-8b-instant"
 
-print("Loading embedding model...")
-embedder = SentenceTransformer("all-MiniLM-L6-v2")
 print("Ready.")
 
 
@@ -131,7 +129,8 @@ def analyze():
 
         # 3. Embed + cluster
         claims    = [p["claim"] for p in valid]
-        matrix    = np.array(embedder.encode(claims))
+        vectorizer = TfidfVectorizer(max_features=100, stop_words="english")
+        matrix    = vectorizer.fit_transform(claims).toarray()
         n_clusters = min(4, len(valid) // 3)
         kmeans    = KMeans(n_clusters=n_clusters, random_state=42, n_init=10)
         ids       = kmeans.fit_predict(matrix)
