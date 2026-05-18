@@ -111,7 +111,7 @@ def analyze():
         if not papers:
             return jsonify({"error": "No papers found for this topic. Try a different search term."}), 404
 
-	papers = papers[:8]
+        papers = papers[:8]
 
         # 2. Extract claims
         valid = []
