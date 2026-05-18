@@ -13,7 +13,7 @@ app = Flask(__name__, static_folder=".", static_url_path="")
 CORS(app)
 
 GROQ_API_KEY = os.environ.get("GROQ_API_KEY")
-MODEL        = "llama-3.3-70b-versatile"
+MODEL        = "llama-3.1-8b-instant"
 
 print("Loading embedding model...")
 embedder = SentenceTransformer("all-MiniLM-L6-v2")
@@ -111,7 +111,7 @@ def analyze():
         if not papers:
             return jsonify({"error": "No papers found for this topic. Try a different search term."}), 404
 
-        papers = papers[:8]
+        papers = papers[:20]
 
         # 2. Extract claims
         valid = []
