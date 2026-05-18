@@ -42,7 +42,7 @@ def groq(system, user, max_tokens=500):
     return r.json()["choices"][0]["message"]["content"].strip()
 
 
-def fetch_papers(topic, max_results=20):
+def fetch_papers(topic, max_results=8):
     """Fetch papers from OpenAlex — free, no key, no rate limits."""
     r = requests.get(
         "https://api.openalex.org/works",
@@ -111,7 +111,7 @@ def analyze():
         if not papers:
             return jsonify({"error": "No papers found for this topic. Try a different search term."}), 404
 
-        papers = papers[:20]
+	papers = papers[:8]
 
         # 2. Extract claims
         valid = []
